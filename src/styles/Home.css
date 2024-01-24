@@ -1,0 +1,9 @@
+.category {
+    background-color: white;
+    margin: 10px;
+    font-size: 100px;
+  }
+  
+  .category p {
+    text-align: center;
+  }

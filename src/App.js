@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Cart from "./pages/Cart";
 import Orders from "./pages/Orders";
@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />        
+        <Navbar />  
         <Routes>
-          <Route path='/home' element={<Home />}/>
+          <Route path='/' exact Component={Home}/>
           <Route path='/account' element={<Account />}/>
           <Route path='/cart' element={<Cart />}/>
           <Route path='/orders' element={<Orders />}/>
