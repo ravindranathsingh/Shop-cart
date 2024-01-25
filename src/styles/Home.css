@@ -1,3 +1,7 @@
+.main-page {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .category {
   background-color: #fff;
 }
@@ -51,10 +55,151 @@
   text-align: center;
 }
 
-.slide-section div {
+.slide-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 250px;
+  height: 30rem;
+  border: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 30rem;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.slide-image svg {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+}
+
+.arrow {
+  position: absolute;
+  filter: drop-shadow(rgba(0, 0, 0, 0.24) 0px 3px 8px);
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 1%;  
+}
+
+.right-arrow {
+  right: 1%;
+}
+
+.carousel-hidden {
+  display: none;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 10px;
+}
+
+.indicator button {
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 100%;
+  background-color: #fff;
+  border: none;
+}
+
+.temptation-section {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 70vh;
+  gap: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+.discount {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.discounts * {
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.discount #title {
+  height: 20%;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.discounts {
+  margin-top: 5rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.discount .discount-items {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+  margin: 5px;
+}
+
+.discounts h1 {
+  font-size: 1.1rem;
+}
+
+.discounts p {
+  color: #50f907;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.discounts * {
+  margin-left: 10px;
+}
+
+.discounts div {
+  width: 150px;
+  height: 150px;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position:center;
+  background-size: cover;
+}
+
+.advertisement {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.advertisement h1 {
+  margin: 50px;
+}
+
+.advertisement p {
+  display: flex;
+  margin: 10%;
+  justify-content: left;
+  align-content: center;
+  font-weight: bolder;
+  color: #fff;
+  font-size: x-large;
 }
