@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom'
 import "../styles/Navbar.css";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
-import StoreIcon from '@mui/icons-material/Store';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
+import logo  from "../assets/logo.png"
 
 export function Navbar() {
   return (
     <div className='navbar'>
-      <Link id='title' to={"/"}><h1><StoreIcon/>ShopCart</h1></Link>
+      <Link to={"/"}><div style={{backgroundImage: `url(${logo})`}}></div></Link>
       <input type='serach' placeholder='Search Products, Brands and More'/>
-      <button><SearchIcon/>Search</button>      
-      <Link to={'/cart'}><LocalGroceryStoreIcon/>Cart</Link>
-      <Link to={'/orders'}> <ShoppingBasketIcon/>Orders</Link>
-      <Link to={"/account"}> <AccountCircleIcon />Account </Link>
+      <button><SearchIcon/><h2>Search</h2></button>      
+      <Link to={'/cart'}><LocalGroceryStoreIcon/><h2>Cart</h2></Link>
+      <Link to={'/orders'}> <ShoppingBasketIcon/><h2>Orders</h2></Link>
+      <Link to={"/account"}> <AccountCircleIcon /><h2>Account</h2> </Link>
     </div>
   )
 }
