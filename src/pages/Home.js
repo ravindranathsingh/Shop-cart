@@ -7,10 +7,17 @@ import Slides from '../components/Slides';
 import { Discount } from "../items/Discount";
 import Discounts from '../components/Discounts';
 import advertisement from "../assets/advertisement.jpg";
+import Electronics, { Electronic } from '../items/Electronics';
+import Trendings, { TrendingItem } from '../items/Trendings';
+import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
+import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
 
 export function Home() {
   return (
     <div className='main-page'>
+{/* section-1 */}
       <div className='header'> 
         <div className='category-list'>
           {Category.map((itemList, key) => {
@@ -20,6 +27,7 @@ export function Home() {
           })}
         </div>    
       </div>
+{/* section-2 */}
       <div className='temptation-section'>
          <div className='discount'>
           <div id='title'><h1>40% discount | Save upto &#x20B9; 899/- on Top deals</h1></div>          
@@ -38,11 +46,74 @@ export function Home() {
           <p>"Unleash the Savings: <br/> Mega Sale Extravaganza!"</p>
          </div>
       </div>
+{/* section-3 */}
       <div className='slides'>
         <div className='sliding-image'>
           <Slides slide={Slider}/>
         </div>          
       </div>
+{/* section-4 */}
+      <div className='products'>
+{/* product list 1 */}
+        <div className='best-of-electronics'>
+          <h1>Best Of Electronics</h1> <hr/>
+          <div>              
+              {
+                Electronic.map((elecList, idx) => {
+                  return (
+                    <div><Electronics idx={idx} image={elecList.image} name={elecList.name} price={elecList.price}/> 
+                      <div className='btn'>
+                        <button>Add To Cart</button>
+                        <button className='buy'>Buy Now</button>
+                      </div>                      
+                    </div>
+                  );
+                })
+              }
+          </div>          
+        </div>
+{/* product list 2 */}  
+        <div className='trending-products'>
+        <h1>Trending Products</h1><hr/>
+          <div>              
+              {
+                TrendingItem.map((prodList, idx) => {
+                  return (
+                    <div><Trendings idx={idx} image={prodList.image} name={prodList.name} price={prodList.price}/> 
+                      <div className='btn'>
+                        <button>Add To Cart</button>
+                        <button className='buy'>Buy Now</button>
+                      </div>                      
+                    </div>
+                  );
+                })
+              }
+          </div>  
+        </div>              
+      </div>
+{/* section-5 */}
+        <section className='trusted-strip'>
+          <span>
+            <AssignmentTurnedInIcon/> 
+            <h2>Certified Products</h2>
+            <p>100% Guarantee</p>
+          </span>
+          <span>
+            <LocalShippingIcon/>
+            <h2>Free Shipping</h2>
+            <p>On above 500/- only</p>
+          </span>
+          <span>
+            <AutorenewIcon/>
+            <h2>Easy Exchange</h2>
+            <p>No Questions asked</p>
+          </span>
+          <span>
+            <HeadsetMicIcon/>
+            <h2>24x7 Support</h2>
+            <p>Customer Priority is must</p>
+          </span>
+        </section>
     </div>
   )
 }
