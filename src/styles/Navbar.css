@@ -4,12 +4,13 @@
     display: flex;
     justify-content: center;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .navbar img {
     width: 20%;
     height:fit-content;
-    transform: rotate(-5deg);
+    margin: 10px;
 }
 
 .navbar .search {
@@ -21,7 +22,7 @@
 
 .navbar .nav-menu {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-content: center;
     margin-top: auto;
 }
