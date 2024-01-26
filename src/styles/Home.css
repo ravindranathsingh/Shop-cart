@@ -53,10 +53,8 @@
 }
 
 .temptation-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   height: 65vh;
   gap: 20px;
   text-align: center;
@@ -65,8 +63,7 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.discount {  
-  margin-top: 10px;
+.discount {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -79,7 +76,7 @@
 }
 
 .discount #title {
-  margin-top: 50px;
+  margin: 10px;
   height: 10%;
   text-align: center;
   align-content: center;
@@ -88,18 +85,18 @@
 }
 
 .discounts {
-  margin: 10px;
+  width: 220px;
+  height: 250px;
+  margin: 5px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
   border: solid whitesmoke 1px;
-  padding: 5px;
 }
 
-.discount .discount-items {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.discount .discount-items {  
   display: flex;
   justify-content: center;
   align-content: center;
+  gap: 20px;
 }
 
 .discounts h1 {
@@ -113,18 +110,17 @@
 }
 
 .discounts div {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 170px;
   margin-bottom: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 5px;
 }
 
 .advertisement {
   margin: 10px;
-  width: 55%;
+  width: auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -348,7 +344,14 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
+  .temptation-section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   .advertisement {
+    display: none;
+  }
+  .discounts div:nth-child(2) {
     display: none;
   }
 }
