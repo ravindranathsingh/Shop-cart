@@ -9,9 +9,6 @@
 .header {
   height: auto;
   margin: 10px 10px 0 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .category-list {
@@ -19,7 +16,6 @@
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
@@ -55,12 +51,116 @@
   text-align: center;
 }
 
+.temptation-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  height: 65vh;
+  gap: 20px;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.discount {  
+  margin-top: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.discounts * {
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.discount #title {
+  height: 20%;
+  text-align: center;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.discounts {
+  margin-top: 2.5rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.discount .discount-items {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 30px;
+  margin: 5px;
+}
+
+.discounts h1 {
+  font-size: 1.1rem;
+}
+
+.discounts p {
+  color: #50f907;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.discounts * {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.discounts div {
+  width: 150px;
+  height: 120px;
+  margin-bottom: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.1);
+}
+
+.advertisement {
+  margin: 10px;
+  width: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.advertisement h1 {
+  margin: 50px;
+  font-family: cursive;
+  transform: rotate(-5deg);
+}
+
+.advertisement p {
+  display: flex;
+  margin: 5rem 3rem;
+  justify-content: left;
+  align-content: center;
+  font-weight: bolder;
+  color: #fff;
+  font-size: x-large;
+}
+
 .slide-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 90%;
   height: 30rem;
+  margin: 2rem 4rem;
   border: 5px;
   overflow: hidden;
   position: relative;
@@ -109,97 +209,4 @@
   border-radius: 100%;
   background-color: #fff;
   border: none;
-}
-
-.temptation-section {
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 70vh;
-  gap: 10px;
-  text-align: center;
-  margin: 10px;
-}
-
-.discount {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.discounts * {
-  margin: 5px;
-  font-size: 0.8rem;
-}
-
-.discount #title {
-  height: 20%;
-  text-align: center;
-  font-size: 0.8rem;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.discounts {
-  margin-top: 5rem;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.discount .discount-items {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  gap: 30px;
-  margin: 5px;
-}
-
-.discounts h1 {
-  font-size: 1.1rem;
-}
-
-.discounts p {
-  color: #50f907;
-  font-weight: 800;
-  font-size: 1rem;
-}
-
-.discounts * {
-  margin-left: 10px;
-}
-
-.discounts div {
-  width: 150px;
-  height: 150px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.advertisement {
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: left;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.advertisement h1 {
-  margin: 50px;
-}
-
-.advertisement p {
-  display: flex;
-  margin: 10%;
-  justify-content: left;
-  align-content: center;
-  font-weight: bolder;
-  color: #fff;
-  font-size: x-large;
 }

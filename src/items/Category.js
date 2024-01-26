@@ -1,4 +1,3 @@
-import Grocery from '../assets/Grocery.jpg';
 import Mobile from '../assets/Mobile.jpg';
 import Fashion from '../assets/Fashion.jpg';
 import Electronic from '../assets/Electronic.jpg';
@@ -9,10 +8,6 @@ import Furniture from '../assets/Furniture.jpg';
 import Bag from '../assets/Bag.jpg';
 
 export const Category = [
-    {
-        name : "Groceries",
-        image: Grocery,
-    },
     {
         name : "Mobiles",
         image: Mobile,

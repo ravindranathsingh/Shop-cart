@@ -19,11 +19,6 @@ export function Home() {
             );
           })}
         </div>    
-      </div> 
-      <div className='slides'>
-        <div className='sliding-image'>
-          <Slides slide={Slider}/>
-        </div>          
       </div>
       <div className='temptation-section'>
          <div className='discount'>
@@ -42,6 +37,11 @@ export function Home() {
           <h1>Sale Coming soon</h1>
           <p>"Unleash the Savings: <br/> Mega Sale Extravaganza!"</p>
          </div>
+      </div>
+      <div className='slides'>
+        <div className='sliding-image'>
+          <Slides slide={Slider}/>
+        </div>          
       </div>
     </div>
   )
