@@ -50,11 +50,14 @@
     border-radius: 5px;
 }
 
+.navbar input:focus-visible {
+    outline: solid #525CEB 0.5px;}
+
 .navbar button {
     width: 100px;
     border: none;
     background-color: #525CEB;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -64,13 +67,14 @@
     color: #0F1035;
     display: flex;
     justify-content: space-around;
-    transition: ease-in-out 0.5s;
+    
 }
 
 .navbar a:hover {
     border-radius: 5px;
-    border-bottom: solid #525CEB 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: solid #525CEB 3px;
+    transition: ease-in-out 0.5s;
+    background-color: #d2e3ff;
 }
 
 .navbar h2 {

@@ -23,7 +23,7 @@ export function Home() {
         <img src={site_promo} alt='site_promo' />
         <div className='promo'>
           <h2>Unparalleled Quality, Endless Style!</h2>
-          <h1>"Quality Unleashed, Style Unmatched – Elevate Your Every Experience!"</h1>
+          <h1>Elevate Your Life, Shop now!</h1>
           <p>Discover endless style and superior quality across all our products. Elevate every aspect of your lifestyle with
              our meticulously crafted items. Where quality meets diversity, and style knows no bounds.</p>
           <button><ShoppingBagIcon/> Shop Now</button>
