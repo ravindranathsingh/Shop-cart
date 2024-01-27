@@ -16,9 +16,10 @@
 
 .navbar .search {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: right;
     align-items: center;
     margin: auto;
+    gap: 5px;
 }
 
 .navbar .nav-menu {
@@ -45,7 +46,7 @@
 .navbar input {
     background-color: #B4D4FF;
     border: none;
-    width: auto;
+    width: 70%;
     border-radius: 5px;
 }
 

@@ -13,11 +13,27 @@ import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import site_promo from "../assets/site_promo.png";
 
 export function Home() {
   return (
     <div className='main-page'>
-{/* section-1 */}
+      <div className='site_promo'>
+        <img src={site_promo} alt='site_promo' />
+        <div className='promo'>
+          <h2>Unparalleled Quality, Endless Style!</h2>
+          <h1>"Quality Unleashed, Style Unmatched – Elevate Your Every Experience!"</h1>
+          <p>Discover endless style and superior quality across all our products. Elevate every aspect of your lifestyle with
+             our meticulously crafted items. Where quality meets diversity, and style knows no bounds.</p>
+          <button><ShoppingBagIcon/> Shop Now</button>
+        </div>
+      </div>
+      <div className='slides'>
+        <div className='sliding-image'>
+          <Slides slide={Slider}/>
+        </div>          
+      </div>
       <div className='header'> 
         <div className='category-list'>
           {Category.map((itemList, key) => {
@@ -26,35 +42,8 @@ export function Home() {
             );
           })}
         </div>    
-      </div>
-{/* section-2 */}
-      <div className='temptation-section'>
-         <div className='discount'>
-          <div id='title'><h1>40% discount | Save upto &#x20B9; 899/- on Top deals</h1></div>          
-          <div className='discount-items'>
-            {
-              Discount.map((discountslist, key3) => {
-                return (
-                  <div ><Discounts key={key3} image={discountslist.image} product={discountslist.product} discount={discountslist.discount} price={discountslist.price}/></div>
-                );
-              })
-            }
-          </div>
-         </div>
-         <div className='advertisement' style={{backgroundImage: `url(${advertisement})`}}>
-          <h1>Sale Coming soon</h1>
-          <p>"Unleash the Savings: <br/> Mega Sale Extravaganza!"</p>
-         </div>
-      </div>
-{/* section-3 */}
-      <div className='slides'>
-        <div className='sliding-image'>
-          <Slides slide={Slider}/>
-        </div>          
-      </div>
-{/* section-4 */}
+      </div>      
       <div className='products'>
-{/* product list 1 */}
         <div className='best-of-electronics'>
           <h1>Best Of Electronics</h1> <hr/>
           <div>              
@@ -72,7 +61,24 @@ export function Home() {
               }
           </div>          
         </div>
-{/* product list 2 */}  
+        <div className='temptation-section'>
+         <div className='discount'>
+          <div id='title'><h1>40% discount | Save upto &#x20B9; 899/- on Top deals</h1></div>          
+          <div className='discount-items'>
+            {
+              Discount.map((discountslist, key3) => {
+                return (
+                  <div ><Discounts key={key3} image={discountslist.image} product={discountslist.product} discount={discountslist.discount} price={discountslist.price}/></div>
+                );
+              })
+            }
+          </div>
+         </div>
+         <div className='advertisement' style={{backgroundImage: `url(${advertisement})`}}>
+          <h1>Sale Coming soon</h1>
+          <p>"Unleash the Savings: <br/> Mega Sale Extravaganza!"</p>
+         </div>
+      </div> 
         <div className='trending-products'>
         <h1>Trending Products</h1><hr/>
           <div>              
@@ -91,7 +97,6 @@ export function Home() {
           </div>  
         </div>              
       </div>
-{/* section-5 */}
         <section className='trusted-strip'>
           <span>
             <AssignmentTurnedInIcon/> 
