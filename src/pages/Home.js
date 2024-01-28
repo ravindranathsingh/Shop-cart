@@ -61,7 +61,8 @@ export function Home() {
               }
           </div>          
         </div>
-        <div className='temptation-section'>
+      </div>
+      <div className='temptation-section'>
          <div className='discount'>
           <div id='title'><h1>40% discount | Save upto &#x20B9; 899/- on Top deals</h1></div>          
           <div className='discount-items'>
@@ -79,6 +80,7 @@ export function Home() {
           <p>"Unleash the Savings: <br/> Mega Sale Extravaganza!"</p>
          </div>
       </div> 
+      <div className='products'>
         <div className='trending-products'>
         <h1>Trending Products</h1><hr/>
           <div>              

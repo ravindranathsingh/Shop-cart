@@ -4,8 +4,9 @@ import AboutUs from "../assets/about.png";
 
 export function About() {
   return (
-    <div className='about' style={{backgroundImage: `url(${AboutUs})`}}>
-        <h1>About Us</h1>
+    <div className='about'>
+      <h1>About Us</h1>
+      <div className='about-us' style={{backgroundImage: `url(${AboutUs})`}}>        
         <p>Welcome to our online shopping haven, where style meets convenience! Dive into a world of endless possibilities as 
             you explore our curated collection of fashion-forward apparel, accessories, and lifestyle essentials. Whether you're 
             seeking the latest trends or timeless classics, our diverse range ensures there's something for every taste and 
@@ -17,7 +18,26 @@ export function About() {
             delightful. 
             <h4>Happy shopping!</h4>
         </p>
-    </div>
+      </div>
+      <div className='brand-strip'>
+        <ul class="about-list">
+          <li>
+            <span>Numbers Speak For Themselves!</span>
+          </li>
+          <li class="about-li">
+            <span>5000+</span><span>Curated Products</span>
+          </li>
+          <li class="about-li">
+            <span>800+</span>
+            <span>Rated Products</span>
+          </li>
+          <li class="about-li">
+            <span>40+</span>
+            <span>Product Categories</span>
+          </li>
+        </ul>
+      </div>      
+    </div>    
   );
 }
 

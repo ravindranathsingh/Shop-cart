@@ -3,6 +3,8 @@
 }
 
 .site_promo{
+  margin-top: 2px;
+  height: 90vh;
   background-color: #d2e3ff;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -25,8 +27,8 @@
 }
 
 .site_promo img {
-  width: 450px;
-  margin-left: 50px;
+  width: 500px;
+  margin: 50px;
   background-image: url('../assets//site_promo.png');
   background-size: contain;
   animation: bounce 2s infinite;
@@ -85,12 +87,12 @@
   height: 25rem;
   border: 5px;
   overflow: hidden;
-  position: relative;
 }
 
 .slides {
   margin: 10px;  
   padding: 0 3rem;
+  position: relative;
 }
 
 .carousel {
@@ -112,11 +114,11 @@
 }
 
 .left-arrow {
-  left: 1%;  
+  left: 0%;  
 }
 
 .right-arrow {
-  right: 1%;
+  right: 0%;
 }
 
 .carousel-hidden {
@@ -140,21 +142,22 @@
 
 .header {
   height: auto;
-  margin: 10px 10px 0 10px;
+  margin: 10px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .category {
   width: auto;
   height: 250px;
-  margin: 30px;
+  margin: 15px;
   text-align: center;
   cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: solid darkgrey 0.5px;
+  border-radius: 5px;
 }
 
 .category h1 {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.2rem;
 }
 
@@ -169,7 +172,7 @@
 .category button {
   background-color: #fff;
   width: 100%;
-  height: 180px;
+  height: 200px;
   overflow: hidden;
   border: none;
   background-position: center;
@@ -181,16 +184,21 @@
 
 .category:hover {
   transform: scale(1.009);
-  transition: ease-in-out -2s;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: ease-in-out -1s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
 }
 
 .products {
   background-color: #fff;
-  margin: 10px;
+  margin: 10px 0;
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.products h1 {
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .best-of-electronics > div {
@@ -233,6 +241,7 @@
   height: 65vh;
   gap: 20px;
   margin: 10px 0;
+  background-color: #fff;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -260,10 +269,10 @@
 }
 
 #title {
-  font-size: 1rem;
+  margin: 5px;
+  font-size: 0.9rem;
   text-align: center;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .discount {
@@ -381,12 +390,13 @@
   background-color: #FBF6EE;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 10px;
+  margin: 10px 0 2px 0;
   padding: 10px;
   gap: 15px;
   font-size: 1.3rem;
   justify-content: center;
   align-content: center;
+  cursor: default;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
