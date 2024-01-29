@@ -425,14 +425,14 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-  }
-  .site_promo p {
-    display: none;
+    justify-content: center;
+    align-content: center;
   }
   .site_promo img {
-    background-repeat: no-repeat;
-    margin: 0;
+    display: none;
+  }
+  .slide-image, .carousel {
+    height: 15rem;
   }
   .category-list {
     grid-template-columns: repeat(2, 1fr);
@@ -452,11 +452,13 @@
     display: none;
   }
   .best-of-electronics > div {
+    width: 250px;
     display: flex;
     flex-direction: column;
     margin: auto;
   }
   .trending-products > div {
+    width: 250px;
     display: flex;
     flex-direction: column;    
     margin: auto;
