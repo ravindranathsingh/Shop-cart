@@ -442,11 +442,13 @@
     display: none;
   }
   .best-of-electronics > div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
   }
   .trending-products > div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
   }
 }
