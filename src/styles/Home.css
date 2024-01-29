@@ -427,16 +427,26 @@
     flex-direction: row;
     justify-content: left;
   }
+  .site_promo p {
+    display: none;
+  }
   .site_promo img {
     background-repeat: no-repeat;
+    margin: 0;
   }
   .category-list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
   .temptation-section {
+    height: max-content;
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .discount-items {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 30px;
   }
   .advertisement {
     display: none;
@@ -455,5 +465,10 @@
     display: flex;
     justify-content: center;
     gap: 30px;
+  }
+  .trusted-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 }
