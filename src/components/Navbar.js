@@ -11,7 +11,8 @@ import SearchIcon from '@mui/icons-material/Search';
 export function Navbar() {
   return ( 
     <>
-    <div className='navbar'><img src={logo} alt='logo'/>
+    <div className='navbar'>
+      <Link to={'/'}><img src={logo} alt='logo'/></Link>
       <div className='search'>          
         <input type='serach' placeholder='Search Products, Brands and More'/>
         <button><SearchIcon/><h2>Search</h2></button>   

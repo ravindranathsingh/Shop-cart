@@ -6,6 +6,15 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  color: blue;  
+}
+
 body {  
   background-color: #F9F9F9;
 }

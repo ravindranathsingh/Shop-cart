@@ -1,51 +1,90 @@
 import React from 'react'
-
+import Watch from "../assets/Watch.jpg";
 import Keyboard from "../assets/Keyboard.jpg";
 import Printer from "../assets/Printer.jpg";
 import Camera from "../assets/Camera.jpg";
 import Monitors from "../assets/Monitors.jpg";
-import TV from "../assets/TV.jpg";
 import Mouse from "../assets/Mouse.jpg";
+import Desktops from "../assets/Desktops.webp";
+import Trimmer from "../assets/Trimmer.webp";
+import Lenovo_Laptop from "../assets/Lenovo_Laptop.webp";
 
-export const Electronic = [
+export const electronicList = [
     {
-        name: "KeyBoard",
+        name : "ASUS Gaming & Editing Desktops Core i5 Core i5",
+        image: Desktops,
+        price: '35,590',
+    },
+    {
+        name : "PHILIPS BT3101/15 Trimmer",
+        image: Trimmer,
+        price: '1,049',
+    },
+    {
+        name : "Lenovo IdeaPad Slim 3 Intel Core i5",
+        image: Lenovo_Laptop,
+        price: '30,990',
+    },
+    {
+        name: "Noise Icon Buzz Smart Watch",
+        image: Watch,
+        price: "2,499"
+    },
+    {
+        name: "ZEBRONICS Zeb-K20 Wired USB Desktop Keyboard",
         image: Keyboard,
-        price: 1149
+        price: "849"
     },
     {
-        name: "Printer",
+        name: "HP LaserJet M1005 MFP",
         image: Printer,
-        price: 20520
+        price: "20,520"
     },
     {
-        name: "Camera",
+        name: "Canon EOS 300D DSLR Camera",
         image: Camera,
-        price: 44949
+        price: '31,990'
     },
     {
-        name: "Monitors",
+        name: "Intel Monitor (15 inch) HD",
         image: Monitors,
-        price: 24949
+        price: '14,990'
     },
     {
-        name: "TV",
-        image: TV,
-        price: 12499
-    },
-    {
-        name: "Mouse",
+        name: "Logitech Mouse",
         image: Mouse,
-        price: 249
-    },
+        price: '249'
+    }
 ];
-
-export function Electronics({image, name, price}) {
+function GetelectronicList({image, name, price}) {
+        return (
+            <div className='productItems'>
+                <div style={{backgroundImage: `url(${image})`}}></div>
+                <p>{name}</p>
+                <p>Price: &#x20B9; {price}</p>
+            </div>
+          );
+    }
+export function Electronics() {    
   return (
-    <div className='electronic'>
-        <div style={{backgroundImage: `url(${image})`}}></div>
-        <p>{name}</p>
-        <p>Price: &#x20B9; {price}</p>
+    <div className='products'>
+        <div className='product-list'>
+          <h1>Unleash the Future with Our Cutting-Edge Electronics!</h1> <hr/>
+          <div>              
+              {
+                electronicList.map((electronicItem, idx) => {
+                  return (
+                    <div><GetelectronicList idx={idx} image={electronicItem.image} name={electronicItem.name} price={electronicItem.price}/> 
+                      <div className='btn'>
+                        <button>Add To Cart</button>
+                        <button className='buy'>Buy Now</button>
+                      </div>                      
+                    </div>
+                  );
+                })
+              }
+          </div>          
+        </div>
     </div>
   )
 }

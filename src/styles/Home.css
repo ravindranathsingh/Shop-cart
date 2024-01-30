@@ -4,7 +4,7 @@
 
 .site_promo{
   margin-top: 2px;
-  height: 90vh;
+  height: 100vh;
   background-color: #d2e3ff;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -171,17 +171,19 @@
   gap: 5px;
 }
 
-.category button {
+.category a {
   background-color: #fff;
-  width: 100%;
+  width: 150px;
   height: 150px;
-  overflow: hidden;
-  border: none;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   cursor: pointer;
   font-size: 5px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.category img {
+  width: 100%;
+  height: 150px;
 }
 
 .category:hover {
@@ -189,52 +191,6 @@
   transition: ease-in-out -1s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
-}
-
-.products {
-  background-color: #fff;
-  margin: 10px 0;
-  padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.products h1 {
-  margin: 10px;
-  font-size: 1.5rem;
-}
-
-.best-of-electronics > div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 10rem;
-  row-gap: 3rem;
-  text-align: center;
-  margin: 2rem 10rem;
-}
-
-.electronic {
-  border: solid #F0EDCF 0.5px;
-}
-
-.electronic *{
-  margin: auto;
-  border-top: solid #F0EDCF 0.5px;  
-}
-
-.electronic div {
-  width: 150px;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  border: none;
-  cursor: pointer;
-}
-
-.electronic div:hover {
-  transform: scale(1.025);
-  transition: ease-in-out 0.5s;
 }
 
 .temptation-section {
@@ -325,6 +281,18 @@
   font-weight: bolder;
   color: #fff;
   font-size: x-large;
+}
+
+.trends {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.trends h1 {
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .trending-products > div {
@@ -420,6 +388,53 @@
   color: #092635;
 }
 
+.products {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.products h1 {
+  margin: 10px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-list > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 10rem;
+  row-gap: 3rem;
+  text-align: center;
+  margin: 2rem 10rem;
+}
+
+.productItems {
+  border: solid #F0EDCF 0.5px;
+}
+
+.productItems *{
+  margin: auto;
+  border-top: solid #F0EDCF 0.5px;  
+}
+
+.productItems div {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.productItems div:hover {
+  transform: scale(1.025);
+  transition: ease-in-out 0.5s;
+}
+
 @media only screen and (max-width: 900px) {
   .site_promo {
     width: 100%;
@@ -451,12 +466,6 @@
   .advertisement {
     display: none;
   }
-  .best-of-electronics > div {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-  }
   .trending-products > div {
     width: 250px;
     display: flex;
@@ -472,5 +481,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
+  .product-list > div {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
   }
 }

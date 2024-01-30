@@ -7,11 +7,58 @@ import T_shirt from "../assets/T_shirt.jpg";
 import Shoes from "../assets/Shoes.jpg";
 import Refrigirator from "../assets/Refrigirator.jpg";
 
+import Keyboard from "../assets/Keyboard.jpg";
+import Printer from "../assets/Printer.jpg";
+import Camera from "../assets/Camera.jpg";
+import Monitors from "../assets/Monitors.jpg";
+import TV from "../assets/TV.jpg";
+import Mouse from "../assets/Mouse.jpg";
+
 export const TrendingItem = [
     {
-        name: "Pant",
-        image: Pant,
-        price: 899
+        name: "Shoe",
+        image: Shoes,
+        price: 1599
+    },
+    {
+        name: "Mouse",
+        image: Mouse,
+        price: 249
+    },
+    {
+        name: "Monitors",
+        image: Monitors,
+        price: 24949
+    },
+    {
+        name: "TV",
+        image: TV,
+        price: 12499
+    },
+    {
+        name: "T-shirt",
+        image: T_shirt,
+        price: 449
+    },
+    {
+        name: "Refrigirator",
+        image: Refrigirator,
+        price: 22949
+    },
+    {
+        name: "KeyBoard",
+        image: Keyboard,
+        price: 1149
+    },
+    {
+        name: "Printer",
+        image: Printer,
+        price: 20520
+    },
+    {
+        name: "Camera",
+        image: Camera,
+        price: 44949
     },
     {
         name: "Watch",
@@ -24,20 +71,10 @@ export const TrendingItem = [
         price: 26549
     },
     {
-        name: "T-shirt",
-        image: T_shirt,
-        price: 449
+        name: "Pant",
+        image: Pant,
+        price: 899
     },
-    {
-        name: "Shoe",
-        image: Shoes,
-        price: 1599
-    },
-    {
-        name: "Refrigirator",
-        image: Refrigirator,
-        price: 22949
-    }
 ];
 
 export function Trendings({image, name, price}) {
