@@ -11,46 +11,55 @@ import Lenovo_Laptop from "../assets/Lenovo_Laptop.webp";
 
 export const electronicList = [
     {
+        id: 1,
         name : "ASUS Gaming & Editing Desktops Core i5 Core i5",
         image: Desktops,
         price: '35,590',
     },
     {
+        id: 2,
         name : "PHILIPS BT3101/15 Trimmer",
         image: Trimmer,
         price: '1,049',
     },
     {
+        id: 3,
         name : "Lenovo IdeaPad Slim 3 Intel Core i5",
         image: Lenovo_Laptop,
         price: '30,990',
     },
     {
+        id: 4,
         name: "Noise Icon Buzz Smart Watch",
         image: Watch,
         price: "2,499"
     },
     {
+        id: 5,
         name: "ZEBRONICS Zeb-K20 Wired USB Desktop Keyboard",
         image: Keyboard,
         price: "849"
     },
     {
+        id: 6,
         name: "HP LaserJet M1005 MFP",
         image: Printer,
         price: "20,520"
     },
     {
+        id: 7,
         name: "Canon EOS 300D DSLR Camera",
         image: Camera,
         price: '31,990'
     },
     {
+        id: 8,
         name: "Intel Monitor (15 inch) HD",
         image: Monitors,
         price: '14,990'
     },
     {
+        id: 9,
         name: "Logitech Mouse",
         image: Mouse,
         price: '249'
@@ -58,11 +67,17 @@ export const electronicList = [
 ];
 function GetelectronicList({image, name, price}) {
         return (
-            <div className='productItems'>
-                <div style={{backgroundImage: `url(${image})`}}></div>
-                <p>{name}</p>
-                <p>Price: &#x20B9; {price}</p>
-            </div>
+          <>
+          <div className='productItems'>
+            <div style={{backgroundImage: `url(${image})`}}></div>
+            <p>{name}</p>
+            <p>Price: &#x20B9; {price}</p>
+          </div>
+          <div className='btn'>
+            <button className='buy'>Buy Now</button>
+            <button >Add To Cart</button>
+          </div>
+          </>
           );
     }
 export function Electronics() {    
@@ -74,12 +89,7 @@ export function Electronics() {
               {
                 electronicList.map((electronicItem, idx) => {
                   return (
-                    <div><GetelectronicList idx={idx} image={electronicItem.image} name={electronicItem.name} price={electronicItem.price}/> 
-                      <div className='btn'>
-                        <button>Add To Cart</button>
-                        <button className='buy'>Buy Now</button>
-                      </div>                      
-                    </div>
+                    <div><GetelectronicList idx={idx} image={electronicItem.image} name={electronicItem.name} price={electronicItem.price}/></div>
                   );
                 })
               }

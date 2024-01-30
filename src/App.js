@@ -17,31 +17,34 @@ import Shoes from './items/Shoes';
 import Toys from './items/Toys';
 import Furniture from './items/Furniture';
 import Bags from './items/Bags';
+import ShopContextProvider from './context/ShopContextProvider';
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navbar />  
-        <Routes>
-          <Route path='/' exact Component={Home}/>
-          <Route path='/account' element={<Account />}/>
-          <Route path='/cart' element={<Cart />}/>
-          <Route path='/orders' element={<Orders />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='/contact' element={<Contact />}/>
-          <Route path='/privacy' element={<Privacy />}/>
-          <Route path='/mobiles' element={<Mobiles />}/>
-          <Route path='/fashion' element={<Fashion />}/>
-          <Route path='/electronics' element={<Electronics />}/>
-          <Route path='/appliances' element={<Appliances />}/>
-          <Route path='/shoes' element={<Shoes />}/>
-          <Route path='/toys' element={<Toys />}/>
-          <Route path='/furniture' element={<Furniture />}/>
-          <Route path='/bags' element={<Bags />}/>
-        </Routes>
-        <Footer />
-      </Router>
+      <ShopContextProvider>
+        <Router>
+          <Navbar />  
+            <Routes>
+              <Route path='/' exact Component={Home}/>
+              <Route path='/account' element={<Account />}/>
+              <Route path='/cart' element={<Cart />}/>
+              <Route path='/orders' element={<Orders />}/>
+              <Route path='/about' element={<About />}/>
+              <Route path='/contact' element={<Contact />}/>
+              <Route path='/privacy' element={<Privacy />}/>
+              <Route path='/mobiles' element={<Mobiles />}/>
+              <Route path='/fashion' element={<Fashion />}/>
+              <Route path='/electronics' element={<Electronics />}/>
+              <Route path='/appliances' element={<Appliances />}/>
+              <Route path='/shoes' element={<Shoes />}/>
+              <Route path='/toys' element={<Toys />}/>
+              <Route path='/furniture' element={<Furniture />}/>
+              <Route path='/bags' element={<Bags />}/>
+            </Routes>
+          <Footer />
+        </Router>
+      </ShopContextProvider>
     </div>
   );
 }

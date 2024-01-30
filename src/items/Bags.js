@@ -11,46 +11,55 @@ import Hand_Duffel from "../assets/Hand_Duffel.webp";
 
 export const bagList = [
     {
+        id: 1,
         name : "Small Cabin Suitcase (57 cm)",
         image: Suitcase,
         price: '1,199',
     },
     {
+        id: 2,
         name : "GTIER TREKKING",
         image: Trekking,
         price: '528',
     },
     {
+        id: 3,
         name : "Wildcraft Flip Ruck",
         image: Wildcraft,
         price: '1,379',
     },
     {
+        id: 4,
         name : "WROGN 70 L Strolley Duffel Bag",
         image: Duffel,
         price: '549',
     },
     {
+        id: 5,
         name : "Urban Travel Luggage 70 L Strolley Duffel Bag",
         image: Travel_Luggage,
         price: '399',
     },
     {
+        id: 6,
         name : "Fast look Expandable Travel Bag",
         image: Travel_Bag,
         price: '699',
     },
     {
+        id: 7,
         name : "Kamiliant by American Tourister",
         image: Tourister,
         price: '1,649',
     },
     {
+        id: 8,
         name : "JIRFASHION Mountain Rucksack bag",
         image: Mountain,
         price: '415',
     },
     {
+        id: 9,
         name : "Wildcraft 40 L Hand Duffel",
         image: Hand_Duffel,
         price: '889',
@@ -58,11 +67,17 @@ export const bagList = [
 ];
 function GetbagList({image, name, price}) {
         return (
-            <div className='productItems'>
-                <div style={{backgroundImage: `url(${image})`}}></div>
-                <p>{name}</p>
-                <p>Price: &#x20B9; {price}</p>
-            </div>
+          <>
+          <div className='productItems'>
+            <div style={{backgroundImage: `url(${image})`}}></div>
+            <p>{name}</p>
+            <p>Price: &#x20B9; {price}</p>
+          </div>
+          <div className='btn'>
+            <button className='buy'>Buy Now</button>
+            <button >Add To Cart</button>
+          </div>
+          </>
           );
     }
 export function Bags() {    
@@ -74,12 +89,7 @@ export function Bags() {
               {
                 bagList.map((bagItem, idx) => {
                   return (
-                    <div><GetbagList idx={idx} image={bagItem.image} name={bagItem.name} price={bagItem.price}/> 
-                      <div className='btn'>
-                        <button>Add To Cart</button>
-                        <button className='buy'>Buy Now</button>
-                      </div>                      
-                    </div>
+                    <div><GetbagList idx={idx} image={bagItem.image} name={bagItem.name} price={bagItem.price}/></div>
                   );
                 })
               }

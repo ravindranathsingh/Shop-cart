@@ -92,12 +92,7 @@ export function Home() {
               {
                 TrendingItem.map((prodList, idx) => {
                   return (
-                    <div><Trendings idx={idx} image={prodList.image} name={prodList.name} price={prodList.price}/> 
-                      <div className='btn'>
-                        <button>Add To Cart</button>
-                        <button className='buy'>Buy Now</button>
-                      </div>                      
-                    </div>
+                    <div><Trendings idx={idx} image={prodList.image} name={prodList.name} price={prodList.price}/></div>
                   );
                 })
               }
