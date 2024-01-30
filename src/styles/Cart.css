@@ -5,7 +5,7 @@ div .cart-area {
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 10px;
+    margin: 5px 10px;
 }
 
 .cart-area svg {

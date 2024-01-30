@@ -1,6 +1,6 @@
 div .order {
     height: 100vh;
-    margin: 10px;
+    margin: 5px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

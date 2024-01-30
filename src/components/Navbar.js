@@ -9,16 +9,22 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
 
 export function Navbar() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // optional: smooth scrolling animation
+    });
+  };
   return ( 
     <>
     <div className='navbar'>
-      <Link to={'/'}><img src={logo} alt='logo'/></Link>
+      <Link to={'/'} onClick={scrollToTop}><img src={logo} alt='logo'/></Link>
       <div className='search'>          
         <input type='serach' placeholder='Search Products, Brands and More'/>
         <button><SearchIcon/><h2>Search</h2></button>   
       </div>  
       <div className='nav-menu'>
-        <Link to={"/"}><HomeIcon/><h2>Home</h2></Link>         
+        <Link to={"/"} onClick={scrollToTop}><HomeIcon/><h2>Home</h2></Link>         
         <Link to={'/cart'}><LocalGroceryStoreIcon/><h2>Cart</h2></Link>
         <Link to={'/orders'}> <ShoppingBasketIcon/><h2>Orders</h2></Link>
         <Link to={"/account"}> <AccountCircleIcon /><h2>Account</h2> </Link>
