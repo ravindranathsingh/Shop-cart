@@ -17,12 +17,10 @@ import Shoes from './items/Shoes';
 import Toys from './items/Toys';
 import Furniture from './items/Furniture';
 import Bags from './items/Bags';
-import ShopContextProvider from './context/ShopContextProvider';
 
 function App() {
   return (
     <div className="App">
-      <ShopContextProvider>
         <Router>
           <Navbar />  
             <Routes>
@@ -44,7 +42,6 @@ function App() {
             </Routes>
           <Footer />
         </Router>
-      </ShopContextProvider>
     </div>
   );
 }

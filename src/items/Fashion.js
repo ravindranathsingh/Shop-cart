@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Men_Regular from "../assets/Men_Regular.webp";
 import Carson from "../assets/Carson.webp";
 import kuberji from "../assets/kuberji.webp";
@@ -8,7 +8,6 @@ import Regular_wear from "../assets/Regular_wear.webp";
 import Casual from "../assets/Casual.webp";
 import Girls_Casual from "../assets/Girls_Casual.webp";
 import Thermal from "../assets/Thermal.webp";
-import { ShopContext } from '../context/ShopContextProvider';
 
 export const fashionList = [
     {
@@ -67,9 +66,7 @@ export const fashionList = [
     }
 ];
 function GetfashionList(props) {
-  const {id, image, name, price} = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
-  const cartItemAmount = cartItems[id];
+  const {image, name, price} = props.data;
         return (
           <>
           <div className='productItems'>
@@ -79,7 +76,7 @@ function GetfashionList(props) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button onClick={() => addToCart(id)}>Add To Cart { cartItemAmount > 0 && <> ({cartItemAmount}) </>}</button>
+            <button >Add To Cart </button>
           </div>
           </>
           );

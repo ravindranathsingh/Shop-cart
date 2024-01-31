@@ -1,5 +1,4 @@
-import React, { useContext } from 'react'
-import { ShopContext } from "../context/ShopContextProvider";
+import React from 'react'
 import OnePlus_Tv from "../assets/OnePlus_Tv.webp";
 import Washing from "../assets/Washing.webp";
 import Fan from "../assets/Fan.png";
@@ -67,9 +66,7 @@ export const applianceList = [
     }
 ];
 function GetapplianceList(props) {
-  const {id, image, name, price} = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
-  const cartItemAmount = cartItems[id];
+  const {image, name, price} = props.data;
         return (
           <>
           <div className='productItems'>
@@ -79,7 +76,7 @@ function GetapplianceList(props) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button onClick={() => addToCart(id)}>Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}</button>            
+            <button>Add To Cart</button>            
           </div>
           </>
           );

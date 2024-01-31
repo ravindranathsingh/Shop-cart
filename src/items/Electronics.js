@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Watch from "../assets/Watch.jpg";
 import Keyboard from "../assets/Keyboard.jpg";
 import Printer from "../assets/Printer.jpg";
@@ -8,7 +8,6 @@ import Mouse from "../assets/Mouse.jpg";
 import Desktops from "../assets/Desktops.webp";
 import Trimmer from "../assets/Trimmer.webp";
 import Lenovo_Laptop from "../assets/Lenovo_Laptop.webp";
-import { ShopContext } from '../context/ShopContextProvider';
 
 export const electronicList = [
     {
@@ -67,9 +66,7 @@ export const electronicList = [
     }
 ];
 function GetelectronicList(props) {
-  const {id, image, name, price} = props.data;
-  const { addToCart, cartItems } = useContext(ShopContext);
-  const cartItemAmount = cartItems[id];
+  const {image, name, price} = props.data;
         return (
           <>
           <div className='productItems'>
@@ -79,7 +76,7 @@ function GetelectronicList(props) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button onClick={() => addToCart(id)}>Add To Cart {cartItemAmount > 0 && <>({cartItemAmount}) </>}</button>
+            <button >Add To Cart </button>
           </div>
           </>
           );

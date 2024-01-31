@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Motorola from "../assets/Motorola.png";
 import Samsung from "../assets/Samsung.png";
 import Vivo from "../assets/Vivo.png";
@@ -8,7 +8,6 @@ import Poco from "../assets/Poco.png";
 import Redmi from "../assets/Redmi.png";
 import Infinix from "../assets/Infinix.png";
 import Apple from "../assets/Apple.png";
-import { ShopContext } from '../context/ShopContextProvider';
 
 export const mobileList = [
     {
@@ -67,9 +66,7 @@ export const mobileList = [
     }
 ];
 function GetmobileList(props) {
-  const {id, image, name, price} = props.data;
-  const { addToCart, cartItems } = useContext( ShopContext );
-  const cartItemAmount = cartItems[id];
+  const {image, name, price} = props.data;
         return (
           <>
           <div className='productItems'>
@@ -79,7 +76,7 @@ function GetmobileList(props) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button onClick={() => addToCart(id)}>Add To Cart { cartItemAmount > 0 && <> ({cartItemAmount}) </> } </button>
+            <button >Add To Cart</button>
           </div>
           </>
           );
