@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import Pant from "../assets/Pant.jpg";
 import Watch from "../assets/Watch.jpg";
@@ -13,6 +13,7 @@ import Camera from "../assets/Camera.jpg";
 import Monitors from "../assets/Monitors.jpg";
 import tv from "../assets/tv.jpg";
 import Mouse from "../assets/Mouse.jpg";
+import { ShopContext } from '../context/ShopContextProvider';
 
 export const TrendingItem = [
     {
@@ -89,7 +90,10 @@ export const TrendingItem = [
     },
 ];
 
-export function Trendings({image, name, price}) {
+export function Trendings(props) {
+    const {id, image, name, price} = props.data;
+    const { addToCart, cartItems } = useContext(ShopContext);
+    const cartItemAmount = cartItems[id];
   return (
     <>
     <div className='trendings'>
@@ -99,7 +103,7 @@ export function Trendings({image, name, price}) {
     </div>
     <div className='btn'>
         <button className='buy'>Buy Now</button>
-        <button >Add To Cart</button>
+        <button onClick={() => addToCart(id)}>Add To Cart { cartItemAmount > 0 && <> ({cartItemAmount}) </>}</button>
   </div>
   </>
   )

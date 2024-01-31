@@ -90,9 +90,9 @@ export function Home() {
         <h1>Trending Products</h1><hr/>
           <div>              
               {
-                TrendingItem.map((prodList, idx) => {
+                TrendingItem.map((prodList) => {
                   return (
-                    <div><Trendings idx={idx} image={prodList.image} name={prodList.name} price={prodList.price}/></div>
+                    <div><Trendings data={prodList} image={prodList.image} name={prodList.name} price={prodList.price}/></div>
                   );
                 })
               }

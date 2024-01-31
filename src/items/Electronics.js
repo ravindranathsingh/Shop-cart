@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Watch from "../assets/Watch.jpg";
 import Keyboard from "../assets/Keyboard.jpg";
 import Printer from "../assets/Printer.jpg";
@@ -8,6 +8,7 @@ import Mouse from "../assets/Mouse.jpg";
 import Desktops from "../assets/Desktops.webp";
 import Trimmer from "../assets/Trimmer.webp";
 import Lenovo_Laptop from "../assets/Lenovo_Laptop.webp";
+import { ShopContext } from '../context/ShopContextProvider';
 
 export const electronicList = [
     {
@@ -65,7 +66,10 @@ export const electronicList = [
         price: '249'
     }
 ];
-function GetelectronicList({image, name, price}) {
+function GetelectronicList(props) {
+  const {id, image, name, price} = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id];
         return (
           <>
           <div className='productItems'>
@@ -75,7 +79,7 @@ function GetelectronicList({image, name, price}) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button >Add To Cart</button>
+            <button onClick={() => addToCart(id)}>Add To Cart {cartItemAmount > 0 && <>({cartItemAmount}) </>}</button>
           </div>
           </>
           );
@@ -87,9 +91,9 @@ export function Electronics() {
           <h1>Unleash the Future with Our Cutting-Edge Electronics!</h1> <hr/>
           <div>              
               {
-                electronicList.map((electronicItem, idx) => {
+                electronicList.map((electronicItem) => {
                   return (
-                    <div><GetelectronicList idx={idx} image={electronicItem.image} name={electronicItem.name} price={electronicItem.price}/></div>
+                    <div><GetelectronicList data={electronicItem} image={electronicItem.image} name={electronicItem.name} price={electronicItem.price}/></div>
                   );
                 })
               }

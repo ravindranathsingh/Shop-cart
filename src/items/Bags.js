@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ShopContext } from "../context/ShopContextProvider";
 import Suitcase from "../assets/Suitcase.webp";
 import Trekking from "../assets/Trekking.png";
 import Wildcraft from "../assets/Wildcraft.webp";
@@ -65,7 +66,10 @@ export const bagList = [
         price: '889',
     }
 ];
-function GetbagList({image, name, price}) {
+function GetbagList(props) {
+  const {id, image, name, price} = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id];
         return (
           <>
           <div className='productItems'>
@@ -75,7 +79,7 @@ function GetbagList({image, name, price}) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button >Add To Cart</button>
+            <button onClick={() => addToCart(id)}>Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount}) </>}</button>
           </div>
           </>
           );
@@ -87,9 +91,9 @@ export function Bags() {
           <h1>Travel with Ease</h1> <hr/>
           <div>              
               {
-                bagList.map((bagItem, idx) => {
+                bagList.map((bagItem) => {
                   return (
-                    <div><GetbagList idx={idx} image={bagItem.image} name={bagItem.name} price={bagItem.price}/></div>
+                    <div><GetbagList data= {bagItem} image={bagItem.image} name={bagItem.name} price={bagItem.price}/></div>
                   );
                 })
               }

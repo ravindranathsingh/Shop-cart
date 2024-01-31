@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ShopCart_Bed from "../assets/ShopCart_Bed.webp";
 import Take_Interio from "../assets/Take_Interio.webp";
 import Bunk_Loft from "../assets/Bunk_Loft.webp";
@@ -8,6 +8,7 @@ import six_Seater from "../assets/six_Seater.webp";
 import two_Seater from "../assets/two_Seater.webp";
 import Computer_Desk from "../assets/Computer_Desk.webp";
 import Gaming_Chair from "../assets/Gaming_Chair.webp";
+import { ShopContext } from '../context/ShopContextProvider';
 
 export const furnitureList = [
     {
@@ -65,7 +66,10 @@ export const furnitureList = [
         price: '10,449',
     }
 ];
-function GetfurnitureList({image, name, price}) {
+function GetfurnitureList(props) {
+  const {id, image, name, price} = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id];
         return (
           <>
           <div className='productItems'>
@@ -75,7 +79,7 @@ function GetfurnitureList({image, name, price}) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button >Add To Cart</button>
+            <button onClick={() => addToCart(id)}>Add To Cart { cartItemAmount > 0 && <> ({cartItemAmount}) </>}</button>
           </div>
           </>
           );
@@ -87,9 +91,9 @@ export function Furniture() {
           <h1>Timeless Designs for Inspired Living!</h1> <hr/>
           <div>              
               {
-                furnitureList.map((furnitureItem, idx) => {
+                furnitureList.map((furnitureItem) => {
                   return (
-                    <div><GetfurnitureList idx={idx} image={furnitureItem.image} name={furnitureItem.name} price={furnitureItem.price}/></div>
+                    <div><GetfurnitureList data={furnitureItem} image={furnitureItem.image} name={furnitureItem.name} price={furnitureItem.price}/></div>
                   );
                 })
               }

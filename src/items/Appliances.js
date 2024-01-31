@@ -67,7 +67,7 @@ export const applianceList = [
     }
 ];
 function GetapplianceList(props) {
-  const {id, image, name, price} = props.data
+  const {id, image, name, price} = props.data;
   const { addToCart, cartItems } = useContext(ShopContext);
   const cartItemAmount = cartItems[id];
         return (

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Sneaker1 from "../assets/Sneaker1.webp";
 import Sneaker2 from "../assets/Sneaker2.webp";
 import Sneaker3 from "../assets/Sneaker3.webp";
@@ -8,6 +8,7 @@ import Sneaker6 from "../assets/Sneaker6.webp";
 import Sneaker7 from "../assets/Sneaker7.webp";
 import Sneaker8 from "../assets/Sneaker8.webp";
 import Sneaker9 from "../assets/Sneaker9.webp";
+import { ShopContext } from '../context/ShopContextProvider';
 
 export const shoesList = [
     {
@@ -65,7 +66,10 @@ export const shoesList = [
         price: '999',
     }
 ];
-function GetshoesList({image, name, price}) {
+function GetshoesList(props) {
+  const {id, image, name, price} = props.data;
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[id];
         return (
           <>
           <div className='productItems'>
@@ -75,7 +79,7 @@ function GetshoesList({image, name, price}) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button >Add To Cart</button>
+            <button onClick={() => addToCart(id)}>Add To Cart { cartItemAmount > 0 && <> ({cartItemAmount}) </>}</button>
           </div>
           </>
           );
@@ -87,9 +91,9 @@ export function Shoes() {
           <h1>Step into Style, Stride with Confidence</h1> <hr/>
           <div>              
               {
-                shoesList.map((shoesItem, idx) => {
+                shoesList.map((shoesItem) => {
                   return (
-                    <div><GetshoesList idx={idx} image={shoesItem.image} name={shoesItem.name} price={shoesItem.price}/></div>
+                    <div><GetshoesList data={shoesItem} image={shoesItem.image} name={shoesItem.name} price={shoesItem.price}/></div>
                   );
                 })
               }
