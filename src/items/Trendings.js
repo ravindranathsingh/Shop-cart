@@ -11,7 +11,7 @@ import Keyboard from "../assets/Keyboard.jpg";
 import Printer from "../assets/Printer.jpg";
 import Camera from "../assets/Camera.jpg";
 import Monitors from "../assets/Monitors.jpg";
-import tv from "../assets/tv.jpg";
+import TV from "../assets/TV.jpg";
 import Mouse from "../assets/Mouse.jpg";
 
 export const TrendingItem = [
@@ -36,7 +36,7 @@ export const TrendingItem = [
     {
         id: 4,
         name: "TV",
-        image: tv,
+        image: TV,
         price: '12,499'
     },
     {
