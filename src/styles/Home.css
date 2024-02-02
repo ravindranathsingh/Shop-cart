@@ -283,52 +283,6 @@
   font-size: x-large;
 }
 
-.trends {
-  background-color: #fff;
-  margin: 10px 0;
-  padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.trends h1 {
-  margin: 10px;
-  font-size: 1.5rem;
-}
-
-.trending-products > div {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 10rem;
-  row-gap: 3rem;
-  text-align: center;
-  margin: 2rem 10rem;
-}
-
-.trendings {
-  border: solid #F0EDCF 0.5px;
-}
-
-.trendings *{
-  margin: auto;
-  border-top: solid #F0EDCF 0.5px;  
-}
-
-.trendings div {
-  width: 150px;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  border: none;
-}
-
-.trendings div:hover {
-  transform: scale(1.025);
-  transition: ease-in-out 0.5s;
-  cursor: pointer;
-}
-
 .btn {
   margin-top: 1px;
   padding: 10px;

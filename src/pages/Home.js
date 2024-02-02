@@ -3,7 +3,7 @@ import "../styles/Home.css";
 
 import Categories, { Category } from "../components/Categories";
 import Discounts, { Discount } from '../components/Discounts';
-import Trendings, { TrendingItem } from '../items/Trendings';
+import Trendings from '../items/Trendings';
 import Slides from '../components/Slides';
 
 import slide1 from "../assets/slide1.jpg";
@@ -85,19 +85,8 @@ export function Home() {
          </div>
       </div> 
 
-      <div className='trends' ref={myDivRef}>
-        <div className='trending-products'>
-        <h1>Trending Products</h1><hr/>
-          <div>              
-              {
-                TrendingItem.map((prodList) => {
-                  return (
-                    <div><Trendings data={prodList} image={prodList.image} name={prodList.name} price={prodList.price}/></div>
-                  );
-                })
-              }
-          </div>  
-        </div>              
+      <div ref={myDivRef}>
+        <Trendings />
       </div>
 
       <section className='trusted-strip'>

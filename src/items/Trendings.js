@@ -89,21 +89,43 @@ export const TrendingItem = [
     },
 ];
 
-export function Trendings(props) {
-    const {image, name, price} = props.data;
-  return (
-    <>
-    <div className='trendings'>
-        <div style={{backgroundImage: `url(${image})`}}></div>
-        <p>{name}</p>
-        <p>Price: &#x20B9; {price}</p>
-    </div>
-    <div className='btn'>
-        <button className='buy'>Buy Now</button>
-        <button >Add To Cart</button>
-  </div>
-  </>
-  )
+function GettrendList(props) {
+    const {image, name, price} =props.data;
+          return (
+            <>
+            <div className='productItems'>
+              <div style={{backgroundImage: `url(${image})`}}></div>
+              <p>{name}</p>
+              <p>Price: &#x20B9; {price}</p>
+            </div>
+            <div className='btn'>
+              <button className='buy'>Buy Now</button>
+              <button >Add To Cart</button>
+            </div>
+            </>
+            );
+      }
+
+export function Trendings() {
+    return (
+        <div className='products'>
+            <div className='product-list'>
+              <h1>Trending Products</h1> <hr/>
+                <div>              
+                    {
+                        TrendingItem.map((prodList) => {
+                        return (
+                            <div>
+                                <GettrendList data={prodList} image={prodList.image} name={prodList.name} 
+                                price={prodList.price}/>
+                            </div>
+                        );
+                        })
+                    }
+                </div>           
+            </div>
+        </div>
+      )
 }
 
 export default Trendings
