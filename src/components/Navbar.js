@@ -12,7 +12,7 @@ export function Navbar() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // optional: smooth scrolling animation
+      behavior: 'smooth', 
     });
   };
   return ( 
@@ -24,10 +24,10 @@ export function Navbar() {
         <button><SearchIcon/><h2>Search</h2></button>   
       </div>  
       <div className='nav-menu'>
-        <Link to={"/"} onClick={scrollToTop}><HomeIcon/><h2>Home</h2></Link>         
-        <Link to={'/cart'}><LocalGroceryStoreIcon/><h2>Cart</h2></Link>
-        <Link to={'/orders'}> <ShoppingBasketIcon/><h2>Orders</h2></Link>
-        <Link to={"/account"}> <AccountCircleIcon /><h2>Account</h2> </Link>
+        <Link to={"/"} onClick={scrollToTop}><HomeIcon/><h2>Home</h2></Link>
+        <Link to={'/product'} onClick={scrollToTop}> <ShoppingBasketIcon/><h2>Products</h2></Link>         
+        <Link to={'/cart'} onClick={scrollToTop}><LocalGroceryStoreIcon/><h2>Cart</h2></Link>
+        <Link to={"/account"} onClick={scrollToTop}> <AccountCircleIcon /><h2>Account</h2> </Link>
       </div>    
     </div>        
     </>    

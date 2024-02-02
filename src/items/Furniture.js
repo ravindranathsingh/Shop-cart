@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Link } from "react-router-dom"
 import ShopCart_Bed from "../assets/ShopCart_Bed.webp";
 import Take_Interio from "../assets/Take_Interio.webp";
 import Bunk_Loft from "../assets/Bunk_Loft.webp";
@@ -8,6 +9,7 @@ import six_Seater from "../assets/six_Seater.webp";
 import two_Seater from "../assets/two_Seater.webp";
 import Computer_Desk from "../assets/Computer_Desk.webp";
 import Gaming_Chair from "../assets/Gaming_Chair.webp";
+import { ShopContext } from '../context/ShopContextProvider';
 
 export const furnitureList = [
     {
@@ -66,7 +68,8 @@ export const furnitureList = [
     }
 ];
 function GetfurnitureList(props) {
-  const {image, name, price} = props.data;
+  const {id, image, name, price} = props.data;
+  const { addToCart } = useContext(ShopContext);
         return (
           <>
           <div className='productItems'>
@@ -76,7 +79,7 @@ function GetfurnitureList(props) {
           </div>
           <div className='btn'>
             <button className='buy'>Buy Now</button>
-            <button >Add To Cart </button>
+            <button onClick={() => addToCart(id)}>Add To Cart </button>
           </div>
           </>
           );
@@ -85,7 +88,8 @@ export function Furniture() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Timeless Designs for Inspired Living!</h1> <hr/>
+          <h1>Timeless Designs for Inspired Living!</h1>
+          <Link to={'/product'}> Shop Now</Link><hr/> <hr/>
           <div>              
               {
                 furnitureList.map((furnitureItem) => {

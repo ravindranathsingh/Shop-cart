@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import toy1 from "../assets/toy1.webp";
 import toy2 from "../assets/toy2.webp";
 import toy3 from "../assets/toy3.webp";
@@ -75,10 +76,6 @@ function GettoyList(props) {
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
           </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button >Add To Cart</button>
-          </div>
           </>
           );
     }
@@ -86,7 +83,8 @@ export function Toys() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Playful Wonders, Endless Smiles</h1> <hr/>
+          <h1>Playful Wonders, Endless Smiles</h1>
+          <Link to={'/product'}> Shop Now</Link><hr/> <hr/>
           <div>              
               {
                 toyList.map((toyItem) => {

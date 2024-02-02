@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Men_Regular from "../assets/Men_Regular.webp";
 import Carson from "../assets/Carson.webp";
 import kuberji from "../assets/kuberji.webp";
@@ -74,10 +75,6 @@ function GetfashionList(props) {
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
           </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button >Add To Cart </button>
-          </div>
           </>
           );
     }
@@ -85,7 +82,8 @@ export function Fashion() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Elevate Your Style, Define Your Essence</h1> <hr/>
+          <h1>Elevate Your Style, Define Your Essence</h1>
+          <Link to={'/product'}> Shop Now</Link><hr/> <hr/>
           <div>              
               {
                 fashionList.map((fashionItem) => {

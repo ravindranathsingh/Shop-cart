@@ -98,10 +98,6 @@ function GettrendList(props) {
               <p>{name}</p>
               <p>Price: &#x20B9; {price}</p>
             </div>
-            <div className='btn'>
-              <button className='buy'>Buy Now</button>
-              <button >Add To Cart</button>
-            </div>
             </>
             );
       }
@@ -110,7 +106,7 @@ export function Trendings() {
     return (
         <div className='products'>
             <div className='product-list'>
-              <h1>Trending Products</h1> <hr/>
+              <h1>Trending Products | Best in price </h1> <hr/>
                 <div>              
                     {
                         TrendingItem.map((prodList) => {

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Watch from "../assets/Watch.jpg";
 import Keyboard from "../assets/Keyboard.jpg";
 import Printer from "../assets/Printer.jpg";
@@ -74,10 +75,6 @@ function GetelectronicList(props) {
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
           </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button >Add To Cart </button>
-          </div>
           </>
           );
     }
@@ -85,7 +82,8 @@ export function Electronics() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Unleash the Future with Our Cutting-Edge Electronics!</h1> <hr/>
+          <h1>Unleash the Future with Our Cutting-Edge Electronics!</h1> 
+          <Link to={'/product'}> Shop Now</Link><hr/><hr/>
           <div>              
               {
                 electronicList.map((electronicItem) => {

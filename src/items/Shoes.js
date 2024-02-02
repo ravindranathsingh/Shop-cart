@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Sneaker1 from "../assets/Sneaker1.webp";
 import Sneaker2 from "../assets/Sneaker2.webp";
 import Sneaker3 from "../assets/Sneaker3.webp";
@@ -60,7 +61,7 @@ export const shoesList = [
     },
     {
         id: 9,
-        name : "Proase All Rounder Cricket Sports Shoe",
+        name : "Proase Cricket Sports Shoe",
         image: Sneaker9,
         price: '999',
     }
@@ -74,10 +75,6 @@ function GetshoesList(props) {
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
           </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button>Add To Cart</button>
-          </div>
           </>
           );
     }
@@ -85,7 +82,8 @@ export function Shoes() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Step into Style, Stride with Confidence</h1> <hr/>
+          <h1>Step into Style, Stride with Confidence</h1>
+          <Link to={'/product'}> Shop Now</Link><hr/> <hr/>
           <div>              
               {
                 shoesList.map((shoesItem) => {

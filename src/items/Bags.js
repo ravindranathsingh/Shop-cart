@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Suitcase from "../assets/Suitcase.webp";
 import Trekking from "../assets/Trekking.png";
 import Wildcraft from "../assets/Wildcraft.webp";
@@ -74,10 +75,6 @@ function GetbagList(props) {
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
           </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button >Add To Cart </button>
-          </div>
           </>
           );
     }
@@ -85,7 +82,8 @@ export function Bags() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Travel with Ease</h1> <hr/>
+          <h1>Travel with Ease</h1> 
+          <Link to={'/product'}> Shop Now</Link><hr/><hr/>
           <div>              
               {
                 bagList.map((bagItem) => {

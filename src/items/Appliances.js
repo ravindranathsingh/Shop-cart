@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import OnePlus_Tv from "../assets/OnePlus_Tv.webp";
 import Washing from "../assets/Washing.webp";
 import Fan from "../assets/Fan.png";
@@ -66,17 +67,13 @@ export const applianceList = [
     }
 ];
 function GetapplianceList(props) {
-  const {image, name, price} = props.data;
+  const {image, name, price} = props.data; 
         return (
           <>
           <div className='productItems'>
             <div style={{backgroundImage: `url(${image})`}}></div>
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
-          </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button>Add To Cart</button>            
           </div>
           </>
           );
@@ -85,7 +82,8 @@ export function Appliances() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Up to 75% Off on Appliances</h1> <hr/>
+          <h1>Up to 75% Off on Appliances</h1>
+          <Link to={'/product'}> Shop Now</Link><hr/>
           <div>              
               {
                 applianceList.map((applianceItem) => {

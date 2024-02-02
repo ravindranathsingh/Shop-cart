@@ -53,12 +53,15 @@ export function Categories({image, name}) {
         });
       };
   return (
+    <>
     <div className='category'>
       <Link to={name} onClick={scrollToTop}>
         <img src={image} alt={name} />
         <h1>{name}</h1>
       </Link>           
     </div>
+    </>
+    
   )
 }
 

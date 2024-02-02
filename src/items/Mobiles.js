@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 import Motorola from "../assets/Motorola.png";
 import Samsung from "../assets/Samsung.png";
 import Vivo from "../assets/Vivo.png";
@@ -74,10 +75,6 @@ function GetmobileList(props) {
             <p>{name}</p>
             <p>Price: &#x20B9; {price}</p>
           </div>
-          <div className='btn'>
-            <button className='buy'>Buy Now</button>
-            <button >Add To Cart</button>
-          </div>
           </>
           );
     }
@@ -85,7 +82,8 @@ export function Mobiles() {
   return (
     <div className='products'>
         <div className='product-list'>
-          <h1>Mobile Fest Extravaganza!</h1> <hr/>
+          <h1>Mobile Fest Extravaganza!</h1>
+          <Link to={'/product'}> Shop Now</Link><hr/> <hr/>
           <div>              
               {
                 mobileList.map((mobileItem) => {

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Cart from "./pages/Cart";
-import Orders from "./pages/Orders";
+import Product from "./pages/Product";
 import Footer from './components/Footer';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -17,17 +17,19 @@ import Shoes from './items/Shoes';
 import Toys from './items/Toys';
 import Furniture from './items/Furniture';
 import Bags from './items/Bags';
+import ShopContextProvider from './context/ShopContextProvider';
 
 function App() {
   return (
     <div className="App">
+      <ShopContextProvider>
         <Router>
           <Navbar />  
             <Routes>
               <Route path='/' exact Component={Home}/>
               <Route path='/account' element={<Account />}/>
               <Route path='/cart' element={<Cart />}/>
-              <Route path='/orders' element={<Orders />}/>
+              <Route path='/product' element={<Product />}/>
               <Route path='/about' element={<About />}/>
               <Route path='/contact' element={<Contact />}/>
               <Route path='/privacy' element={<Privacy />}/>
@@ -42,6 +44,7 @@ function App() {
             </Routes>
           <Footer />
         </Router>
+      </ShopContextProvider>
     </div>
   );
 }

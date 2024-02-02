@@ -1,16 +1,14 @@
 import React, { useRef } from 'react'
+import { Link } from 'react-router-dom';
 import "../styles/Home.css";
-
 import Categories, { Category } from "../components/Categories";
 import Discounts, { Discount } from '../components/Discounts';
 import Trendings from '../items/Trendings';
 import Slides from '../components/Slides';
-
 import slide1 from "../assets/slide1.jpg";
 import slide2 from "../assets/slide2.jpg";
 import slide3 from "../assets/slide3.jpg";
 import advertisement from "../assets/advertisement.jpg";
-
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
@@ -28,14 +26,6 @@ export function Home() {
 
   const myDivRef = useRef(null);
 
-  const scrollTotrends = (ref) => {
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({
-        behavior: 'smooth', // optional: smooth scrolling animation
-      });
-    }
-  };
-
   return (
     <div className='main-page'>
 
@@ -46,7 +36,7 @@ export function Home() {
           <h1>Elevate Your Life, Shop now!</h1>
           <p>Discover endless style and superior quality across all our products. Elevate every aspect of your lifestyle with
              our meticulously crafted items. Where quality meets diversity, and style knows no bounds.</p>
-          <button onClick={() => scrollTotrends(myDivRef)}><ShoppingBagIcon/> Shop Now</button>
+          <Link to={'/product'}><ShoppingBagIcon/> Shop Now</Link>
         </div>
       </div>
 
@@ -57,6 +47,7 @@ export function Home() {
       </div>
 
       <div className='header'> 
+      <h1>Your One-Stop Shop for Endless Delights!</h1>
         <div className='category-list'>
           {Category.map((itemList, key) => {
             return (
