@@ -88,466 +88,467 @@ export const productList = [
         id: 1,
         name: "Shoe",
         image: Shoes,
-        price: '1,599'
-    },{
+        price: 1599
+    },
+    {
         id: 70,
         name : "Motorola Edge 40 Neo",
         image: Motorola,
-        price: '22,999',
+        price: 22999
     },
     {
         id: 71,
         name : "Samsung Galaxy S21",
         image: Samsung,
-        price: '30,999',
+        price: 30999
     },
     {
         id: 72,
         name : "Vivo T2 Pro 5G",
         image: Vivo,
-        price: '24,999',
+        price: 24999
     },
     {
         id: 73,
         name : "Realme 11 Pro 5G ",
         image: Realme,
-        price: '23,999',
+        price: 23999
     },
     {
         id: 74,
         name : "Nothing Phone",
         image: Nothing,
-        price: '39,999',
+        price: 39999
     },
     {
         id: 75,
         name : "POCO M6 5G",
         image: Poco,
-        price: '9,999',
+        price: 9999
     },
     {
         id: 76,
         name : "Redmi 12",
         image: Redmi,
-        price: '9,499',
+        price: 9499
     },
     {
         id: 77,
         name : "Infinix HOT 30 5G",
         image: Infinix,
-        price: '12,999',
+        price: 12999
     },
     {
         id: 78,
         name : "Apple iPhone 15",
         image: Apple,
-        price: '65,999',
+        price: 65999
     },
     {
         id: 2,
         name: "Mouse",
         image: Mouse,
-        price: '249'
+        price: 249
     },
     {
         id: 3,
         name: "Monitors",
         image: Monitors,
-        price: '24,949'
+        price: 24949
     },
     {
         id: 4,
         name: "TV",
         image: TV,
-        price: '12,499'
+        price: 12499
     },
     {
         id: 5,
         name: "T-shirt",
         image: T_shirt,
-        price: '449'
+        price: 449
     },
     {
         id: 6,
         name: "Refrigirator",
         image: Refrigirator,
-        price: '22,949'
+        price: 22949
     },
     {
         id: 7,
         name: "KeyBoard",
         image: Keyboard,
-        price: '1,149'
+        price: 1149
     },
     {
         id: 8,
         name: "Printer",
         image: Printer,
-        price: '20,520'
+        price: 20520
     },
     {
         id: 9,
         name: "Camera",
         image: Camera,
-        price: '44,949'
+        price: 44949
     },
     {
         id: 10,
         name: "Watch",
         image: Watch,
-        price: '2,499'
+        price: 2499
     },
     {
         id: 11,
         name: "Washing Machine",
         image: Washing_Machine,
-        price: '26,549'
+        price: 26549
     },
     {
         id: 12,
         name: "Pant",
         image: Pant,
-        price: '899'
+        price: 899
     },
     {
         id: 13,
         name : "OnePlus U1S 164 cm (65 inch) Ultra HD",
         image: OnePlus_Tv,
-        price: '47,999',
+        price: 47999
     },
     {
         id: 14,
         name : "LG 6.5 kg Fully Automatic Front Load Washing Machine",
         image: Washing,
-        price: '24,990',
+        price: 24990
     },
     {
         id: 15,
         name : "LUMINOUS Centaur 400 mm 3 Blade Table Fan",
         image: Fan,
-        price: '1,569',
+        price: 1569
     },
     {
         id: 16,
         name : "BAJAJ 410570 GX 1 500 W Juicer Mixer Grinder (3 Jars, Blue)",
         image: Grinder,
-        price: '2,299',
+        price: 2299
     },
     {
         id: 17,
         name : "Whirlpool 308 L Frost Free Double Door 3 Star Refrigerator",
         image: frigde,
-        price: '32,990',
+        price: 32990
     },
     {
         id: 18,
         name : "Panasonic 1 Ton 3 Star Split Inverter AC with Wi-fi Connect - White",
         image: Panasonic_Ac,
-        price: '32,990',
+        price: 32990
     },
     {
         id: 19,
         name : "LIVPURE + Minerals Water Purifier",
         image: Purifier,
-        price: '8,999',
+        price: 8999
     },
     {
         id: 20,
         name : "PHILIPS Vacuum Cleaner with Suction,Turbo Brush",
         image: Vacuum_Cleaner,
-        price: '9,199',
+        price: 9199
     },
     {
         id: 21,
         name : "Panasonic 23 L Convection Microwave Oven",
         image: Microwave,
-        price: '10,290',
+        price: 10290
     },
     {
         id: 22,
         name : "Small Cabin Suitcase (57 cm)",
         image: Suitcase,
-        price: '1,199',
+        price: 1199
     },
     {
         id: 23,
         name : "GTIER TREKKING",
         image: Trekking,
-        price: '528',
+        price: 528
     },
     {
         id: 24,
         name : "Wildcraft Flip Ruck",
         image: Wildcraft,
-        price: '1,379',
+        price: 1379
     },
     {
         id: 25,
         name : "WROGN 70 L Strolley Duffel Bag",
         image: Duffel,
-        price: '549',
+        price: 549
     },
     {
         id: 26,
         name : "Urban Travel Luggage 70 L Strolley Duffel Bag",
         image: Travel_Luggage,
-        price: '399',
+        price: 399
     },
     {
         id: 27,
         name : "Fast look Expandable Travel Bag",
         image: Travel_Bag,
-        price: '699',
+        price: 699
     },
     {
         id: 28,
         name : "Kamiliant by American Tourister",
         image: Tourister,
-        price: '1,649',
+        price: 1649
     },
     {
         id: 29,
         name : "JIRFASHION Mountain Rucksack bag",
         image: Mountain,
-        price: '415',
+        price: 415
     },
     {
         id: 30,
         name : "Wildcraft 40 L Hand Duffel",
         image: Hand_Duffel,
-        price: '889',
+        price: 889
     },
     {
         id: 31,
         name : "ASUS Gaming & Editing Desktops Core i5 Core i5",
         image: Desktops,
-        price: '35,590',
+        price: 35590
     },
     {
         id: 32,
         name : "PHILIPS BT3101/15 Trimmer",
         image: Trimmer,
-        price: '1,049',
+        price: 1049
     },
     {
         id: 33,
         name : "Lenovo IdeaPad Slim 3 Intel Core i5",
         image: Lenovo_Laptop,
-        price: '30,990',
+        price: 30990
     },
     {
         id: 34,
         name : "TIGERSNAKE Men Regular Fit",
         image: Men_Regular,
-        price: '339',
+        price: 339
     },
     {
         id: 35,
         name : "James Carson Men Regular Fit",
         image: Carson,
-        price: '424',
+        price: 424
     },
     {
         id: 36,
         name : "Shree kuberji fashion Men Printed Cotton Blend",
         image: kuberji,
-        price: '799',
+        price: 799
     },
     {
         id: 37,
         name : "SEAKART Women Floral",
         image: Kurti,
-        price: '510',
+        price: 510
     },
     {
         id: 38,
         name : "KRIVITY Embroidered Saree",
         image: Saree,
-        price: '361',
+        price: 361
     },
     {
         id: 39,
         name : "XRV Beach Wear Regular",
         image: Regular_wear,
-        price: '835',
+        price: 835
     },
     {
         id: 40,
         name : "Mars Infiniti Boys & Girls Casual",
         image: Casual,
-        price: '401',
+        price: 401
     },
     {
         id: 41,
         name : "EM DRESSES Baby Girls Casual",
         image: Girls_Casual,
-        price: '151',
+        price: 151
     },
     {
         id: 42,
         name : "Heatonn Top - Pyjama Set Thermal",
         image: Thermal,
-        price: '692',
+        price: 692
     },{
         id: 43,
         name : "ShopCart Engineered Wood Queen Bed",
         image: ShopCart_Bed,
-        price: '9,249',
+        price: 9249
     },
     {
         id: 44,
         name : "Take Interio Engineered Wood Queen Bed",
         image: Take_Interio,
-        price: '9,299',
+        price: 9299
     },
     {
         id: 45,
         name : "StellWell BUNK LOFT BED",
         image: Bunk_Loft,
-        price: '11,321',
+        price: 11321
     },
     {
         id: 46,
         name : "Bharat Lifestyle Deno Fabric 3 Seater Sofa",
         image: three_Seater,
-        price: '11,749',
+        price: 11749
     },
     {
         id: 47,
         name : "Wakeup India Hazy Premium Fabric Sofa",
         image: Wakeup_Sofa,
-        price: '15,928',
+        price: 15928
     },
     {
         id: 48,
         name : "WESTIDO Berger Fabric 6 Seater Sofa",
         image: six_Seater,
-        price: '17,925',
+        price: 17925
     },
     {
         id: 49,
         name : "Wakeup India Snugy Sofa 2 Seater, Sofa Set",
         image: two_Seater,
-        price: '11,359',
+        price: 11359
     },
     {
         id: 50,
         name : "Purple Furniture Elite Wood Computer Desk",
         image: Computer_Desk,
-        price: '12,999',
+        price: 12999
     },
     {
         id: 51,
         name : "Upmarkt Pro Ergonomic Gaming Chair",
         image: Gaming_Chair,
-        price: '10,449',
+        price: 10449
     },{
         id: 52,
         name : "ATOM Gansta1 Sneaker",
         image: Sneaker1,
-        price: '1,339',
+        price: 1339
     },
     {
         id: 53,
         name : "CAMPUS NORTH PLUS",
         image: Sneaker2,
-        price: '1,215',
+        price: 1215
     },
     {
         id: 54,
         name : "RebelBe Outdoor Casual",
         image: Sneaker3,
-        price: '599',
+        price: 599
     },
     {
         id: 55,
         name : "Aadi Synthetic",
         image: Sneaker4,
-        price: '434',
+        price: 434
     },
     {
         id: 56,
         name : "BRUTON Lite Sports Shoe",
         image: Sneaker5,
-        price: '514',
+        price: 514
     },
     {
         id: 57,
         name : "asian Newton-09 White",
         image: Sneaker6,
-        price: '648',
+        price: 648
     },
     {
         id: 58,
         name : "action Action Athleo",
         image: Sneaker7,
-        price: '1,119',
+        price: 1119
     },
     {
         id: 59,
         name : "JQR Signature Sports",
         image: Sneaker8,
-        price: '1,270',
+        price: 1270
     },
     {
         id: 60,
         name : "Proase Cricket Sports Shoe",
         image: Sneaker9,
-        price: '999',
+        price: 999
     },
     {
         id: 61,
         name : "spincart Mini Monster",
         image: toy1,
-        price: '55',
+        price: 55
     },
     {
         id: 62,
         name : "Soft Bullet Shooting Pistol Toy Guns",
         image: toy2,
-        price: '174',
+        price: 174
     },
     {
         id: 63,
         name : "TOYT R3 sports Ride on Bike",
         image: toy3,
-        price: '11,114',
+        price: 11114
     },
     {
         id: 64,
         name : "Learn With Fun 2 in 1 Construction Trucks",
         image: toy4,
-        price: '219',
+        price: 219
     },
     {
         id: 65,
         name : "Zenex store Monster truck toy",
         image: toy5,
-        price: '55',
+        price: 55
     },
     {
         id: 66,
         name : "VikriDa Kids 49 Key Piano Keyboard",
         image: toy6,
-        price: '1,349',
+        price: 1349
     },
     {
         id: 67,
         name : "Rajni Plastic Air Sports Mauser Gun Toy",
         image: toy7,
-        price: '99',
+        price: 99
     },
     {
         id: 68,
         name : "Kirat Doctor Kit Toy",
         image: toy8,
-        price: '194',
+        price: 194
     },
     {
         id: 69,
         name : "Educational Laptop Computer Toy",
         image: toy9,
-        price: '1,099',
+        price: 1099
     }
 ];
 
@@ -556,7 +557,7 @@ function GetprodList(props) {
     const { addToCart } = useContext(ShopContext);
 
     const handleAddToCart = () => {
-        toast.success('Item added to cart!', { position: 'top-right', autoClose: 3000 });
+        toast.success('Item added to cart!', { position: 'top-right', autoClose: 1500 });
       };
 
       const onButtonClick = () => {
