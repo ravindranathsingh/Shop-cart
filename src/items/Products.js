@@ -1,4 +1,6 @@
 import React, { useContext } from 'react'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Pant from "../assets/Pant.jpg";
 import Watch from "../assets/Watch.jpg";
@@ -552,6 +554,15 @@ export const productList = [
 function GetprodList(props) {
     const {id, image, name, price} =props.data;
     const { addToCart } = useContext(ShopContext);
+
+    const handleAddToCart = () => {
+        toast.success('Item added to cart!', { position: 'top-right', autoClose: 3000 });
+      };
+
+      const onButtonClick = () => {
+        addToCart(id); 
+        handleAddToCart();
+      }
           return (
             <>
             <div className='productItems'>
@@ -561,7 +572,7 @@ function GetprodList(props) {
             </div>
             <div className='btn'>
               <button className='buy'>Buy Now</button>
-              <button onClick={() => addToCart(id)}>Add To Cart </button>
+              <button onClick={() => onButtonClick()}>Add To Cart </button>
             </div>
             </>
             );

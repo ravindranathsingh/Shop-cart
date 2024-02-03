@@ -71,6 +71,7 @@
     width: 20px;
     border: solid black 0.5px;
     background-color: #65D724;
+    cursor: pointer;
   }
 
   .cart-btn {

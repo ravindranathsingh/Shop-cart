@@ -18,10 +18,12 @@ import Toys from './items/Toys';
 import Furniture from './items/Furniture';
 import Bags from './items/Bags';
 import ShopContextProvider from './context/ShopContextProvider';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <div className="App">
+     <ToastContainer />
       <ShopContextProvider>
         <Router>
           <Navbar />  

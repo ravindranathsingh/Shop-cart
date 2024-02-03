@@ -11,7 +11,8 @@ export function Cart() {
       <div className='cart-product-list'>
         <h1>Your Cart Items are : </h1> <hr/>
         <div>
-        {productList.map((prodList) => {
+        {
+        productList.map((prodList) => {
           if(cartItem[prodList.id] !== 0 ) {
             return (
               <div>
