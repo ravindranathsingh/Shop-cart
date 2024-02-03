@@ -14,7 +14,7 @@
 .cart-product-list > div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     column-gap: 10rem;
     row-gap: 3rem;
     text-align: center;
@@ -43,6 +43,34 @@
 .cart-productItems div:hover {
     transform: scale(1.025);
     transition: ease-in-out 0.5s;
+  }
+
+  .count-handle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .count-handle p {
+    margin-right: 30px;
+  }
+
+  .count-handle * {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+  }
+
+  .count-handle input {
+    width: 30px;
+    text-align: center;
+    border: solid black 0.5px;
+  }
+
+  .count-handle button {
+    width: 20px;
+    border: solid black 0.5px;
+    background-color: #65D724;
   }
 
   .cart-btn {

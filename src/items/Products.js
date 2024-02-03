@@ -11,6 +11,15 @@ import Printer from "../assets/Printer.jpg";
 import Camera from "../assets/Camera.jpg";
 import Monitors from "../assets/Monitors.jpg";
 import TV from "../assets/TV.jpg";
+import Motorola from "../assets/Motorola.png";
+import Samsung from "../assets/Samsung.png";
+import Vivo from "../assets/Vivo.png";
+import Realme from "../assets/Realme.png";
+import Nothing from "../assets/Nothing.png";
+import Poco from "../assets/Poco.png";
+import Redmi from "../assets/Redmi.png";
+import Infinix from "../assets/Infinix.png";
+import Apple from "../assets/Apple.png";
 import Mouse from "../assets/Mouse.jpg";
 import OnePlus_Tv from "../assets/OnePlus_Tv.webp";
 import Washing from "../assets/Washing.webp";
@@ -78,6 +87,59 @@ export const productList = [
         name: "Shoe",
         image: Shoes,
         price: '1,599'
+    },{
+        id: 70,
+        name : "Motorola Edge 40 Neo",
+        image: Motorola,
+        price: '22,999',
+    },
+    {
+        id: 71,
+        name : "Samsung Galaxy S21",
+        image: Samsung,
+        price: '30,999',
+    },
+    {
+        id: 72,
+        name : "Vivo T2 Pro 5G",
+        image: Vivo,
+        price: '24,999',
+    },
+    {
+        id: 73,
+        name : "Realme 11 Pro 5G ",
+        image: Realme,
+        price: '23,999',
+    },
+    {
+        id: 74,
+        name : "Nothing Phone",
+        image: Nothing,
+        price: '39,999',
+    },
+    {
+        id: 75,
+        name : "POCO M6 5G",
+        image: Poco,
+        price: '9,999',
+    },
+    {
+        id: 76,
+        name : "Redmi 12",
+        image: Redmi,
+        price: '9,499',
+    },
+    {
+        id: 77,
+        name : "Infinix HOT 30 5G",
+        image: Infinix,
+        price: '12,999',
+    },
+    {
+        id: 78,
+        name : "Apple iPhone 15",
+        image: Apple,
+        price: '65,999',
     },
     {
         id: 2,
