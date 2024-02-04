@@ -367,18 +367,6 @@
   margin: 2rem 10rem;
 }
 
-.product-list a {
-  font-size: 1.3rem;
-  position: absolute;
-  right: 20px;
-  width: 100px;
-  text-decoration: none;
-  background-color: #000000;
-  color: #fff;
-  padding: 10px;
-  border-radius: 0 0 20px 20px;
-}
-
 .productItems {
   border: solid #F0EDCF 0.5px;
 }
