@@ -38,7 +38,9 @@ export function Cart(props) {
                   price={prodList.price}/>
               </div>
           );
-          }})}
+          }
+          return null;
+          })}
         </div>
         </>
       ) : (
