@@ -360,7 +360,6 @@
 .product-list > div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   column-gap: 10rem;
   row-gap: 3rem;
   text-align: center;

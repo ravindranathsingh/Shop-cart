@@ -8,7 +8,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import InputIcon from '@mui/icons-material/Input';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-export function Cart(props) {
+export function Cart() {
   const { cartItem, getTotalCartAmount, checkout } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
