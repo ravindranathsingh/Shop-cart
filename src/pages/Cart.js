@@ -6,6 +6,7 @@ import CartItems from '../components/CartItems';
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import InputIcon from '@mui/icons-material/Input';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 export function Cart(props) {
   const { cartItem, getTotalCartAmount, checkout } = useContext(ShopContext);
@@ -41,8 +42,12 @@ export function Cart(props) {
         </div>
         </>
       ) : (
-        
-        <h1> Your Shopping Cart is Empty</h1>
+        <div className='empty-cart'>
+          <div className='empty-cart-content'>
+            <AddShoppingCartIcon />
+            <h1> Your Cart is Empty</h1>
+          </div>            
+        </div>       
       )}
       </div> 
     </div>

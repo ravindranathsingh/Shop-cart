@@ -142,6 +142,32 @@
     cursor: pointer;
   }
 
+  .empty-cart {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .empty-cart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .empty-cart-content svg {
+    width: 200px;
+    height: 200px;
+    color: #525CEB;
+    margin: 40px auto;
+  }
+
+  .empty-cart-content h1 {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+
 @media only screen and (max-width: 900px) {
     .cart-product-list > div {
       width: 250px;
